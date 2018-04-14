@@ -6,6 +6,7 @@ sparse matrix
 http://code.activestate.com/recipes/52275-sparse-a-dictionary-based-sparse-matrix-class/
 
 structure python code
+https://www.youtube.com/watch?v=qmsTqQbcBNM&t=253s
 http://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/structuring-python.html
 
 python project the right way
