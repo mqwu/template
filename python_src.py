@@ -5,6 +5,9 @@ http://docs.python-guide.org/en/latest/writing/structure/
 sparse matrix
 http://code.activestate.com/recipes/52275-sparse-a-dictionary-based-sparse-matrix-class/
 
+virtual env
+https://www.youtube.com/watch?v=N5vscPTWKOk
+  
 structure python code
 https://www.youtube.com/watch?v=qmsTqQbcBNM&t=253s
 http://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/structuring-python.html
