@@ -3,11 +3,43 @@
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+export SPARK_HOME=/opt/spark
+#export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
+export PYSPARK_DRIVER_PYTHON="jupyter"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+export PYSPARK_PYTHON=python3
+export OPENBLAS_NUM_THREADS=1
+
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+
+export PATH=$SPARK_HOME/bin:$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin
+
 alias ls='ls -GFh'
 alias ll='ls -l'
 alias la='ls -a'
-alias c='cd /mnt/c/'
-alias rec='cd /mnt/c/Users/mingqwu/Project'
+alias lr='find . -maxdepth 1 -mmin' # list recent file lr -5 # files modified in last 5min
+alias c='cd /mnt/c'
+alias d='cd /mnt/d'
+alias e='cd /mnt/e'
+alias desk='cd /mnt/c/Users/mingqwu/Desktop/'
+alias dl='cd /mnt/c/Users/mingqwu/Downloads/'
+alias sup='superset runserver -d'
+alias rec='cd /mnt/e/rec'
+
+
+# tmux related
+# Attaches tmux to the last session; creates a new session if none exists.
+alias t='tmux attach || tmux new-session'
+# Attaches tmux to a session (example: ta portal)
+alias ta='tmux attach -t'
+# Creates a new session
+alias tn='tmux new-session'
+# Lists all ongoing sessions
+alias tl='tmux list-sessions'
+alias mqsql='mysql -u root -p'
+alias spark='/opt/spark/bin/pyspark'
+
 
 function prompt {
 	local BLACK="\[\033[0;30m\]"
@@ -44,6 +76,20 @@ export PATH
 export PATH="/Users/mqwu/Applications/anaconda3/bin:/Applications/CMake.app/Contents/bin:$PATH"
 
 
-# JAVA 
-#export JAVA_HOME=$(/usr/libexec/java_home)
+# pretty json format tools
+alias pjson='python -m json.tool'
+
+prettyjson_s() {
+    echo "$1" | python -m json.tool
+}
+
+prettyjson_f() {
+    python -m json.tool "$1"
+}
+
+prettyjson_w() {
+    curl "$1" | python -m json.tool
+}
+
+
 
